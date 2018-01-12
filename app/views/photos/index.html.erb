@@ -22,7 +22,7 @@
         <td><%= photo.date %></td>
         <td><%= photo.caption %></td>
         <td><%= photo.image %></td>
-        <td><%= photo.user_id %></td>
+        <td><%= photo.user.email %></td>
         <td><%= photo.likes %></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
