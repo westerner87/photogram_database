@@ -7,6 +7,10 @@ class Like < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :user_like,
+             :through => :user,
+             :source => :photos
+
   # Validations
 
 end

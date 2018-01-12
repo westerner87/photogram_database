@@ -11,6 +11,10 @@ class Photo < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :like,
+             :through => :user,
+             :source => :likes
+
   # Validations
 
 end
