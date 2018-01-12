@@ -1,6 +1,9 @@
 class Photo < ApplicationRecord
   # Direct associations
 
+  has_many   :bookmarks,
+             :dependent => :destroy
+
   belongs_to :user
 
   # Indirect associations
