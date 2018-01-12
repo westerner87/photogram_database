@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @like = Like.new
+    @photo = Photo.new
+    @bookmark = Bookmark.new
     @user = User.find(params[:id])
 
     render("users/show.html.erb")
