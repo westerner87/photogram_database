@@ -6,10 +6,22 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Photo</dt>
-      <dd><%= @bookmark.photo_id %></dd>
+      <dd>
+        <% if @bookmark.photo.present? %>
+          <a href="/photos/<%= @bookmark.photo_id %>">
+            <%= @bookmark.photo.caption %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>User</dt>
-      <dd><%= @bookmark.user_id %></dd>
+      <dd>
+        <% if @bookmark.user.present? %>
+          <a href="/users/<%= @bookmark.user_id %>">
+            <%= @bookmark.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
